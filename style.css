@@ -43,7 +43,7 @@ body {
 .navbar__logo {
   background-color: var(--primary);
   background-image: linear-gradient(
-    to top,
+    to right,
     var(--secondary) 0%,
     var(--primary) 100%
   );
@@ -192,7 +192,7 @@ body {
 .hero__content h1 {
   background-color: var(--primary);
   background-image: linear-gradient(
-    to top,
+    to right,
     var(--secondary) 0%,
     var(--primary) 100%
   );
@@ -219,7 +219,7 @@ body {
   margin-top: 2rem;
   position: relative;
   background-image: linear-gradient(
-    to top,
+    to right,
     var(--secondary) 0%,
     var(--primary) 100%
   );
@@ -321,7 +321,7 @@ body {
 .services__content h2 {
   background-color: var(--primary);
   background-image: linear-gradient(
-    to top,
+    to right,
     var(--secondary) 0%,
     var(--primary) 100%
   );
