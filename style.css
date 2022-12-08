@@ -3,11 +3,10 @@
 :root {
   --dark-gray: #131313;
   --secondary-dark-gray: #1a1a1a;
-  --orange: #ff8177;
-  --red: #ff0844;
+  --primary: #fff477;
+  --secondary: #ff9808;
+  --secondary-dark: #ff7308;
   --white: #fff;
-  --secondary-orange: #ffa963;
-  --secondary-red: #ff1778;
 }
 
 * {
@@ -40,8 +39,12 @@ body {
 }
 
 .navbar__logo {
-  background-color: var(--orange);
-  background-image: linear-gradient(to top, var(--red) 0%, var(--orange) 100%);
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    to top,
+    var(--secondary) 0%,
+    var(--primary) 100%
+  );
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -51,15 +54,6 @@ body {
   align-items: center;
   font-size: 2rem;
   text-decoration: none;
-}
-.navbar__logo:hover {
-  background-color: var(--secondary-orange);
-  background-image: linear-gradient(
-    to top,
-    var(--secondary-red) 0%,
-    var(--secondary-orange) 100%
-  );
-  transition: all 0.3s ease-in-out;
 }
 
 .navbar__menu {
@@ -86,7 +80,7 @@ body {
   color: var(--white);
 }
 .navbar__links:hover {
-  color: var(--orange);
+  color: var(--primary);
   transition: all 0.3s ease-in-out;
 }
 .navbar__links::after {
@@ -97,7 +91,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--orange);
+  background-color: var(--secondary);
   transform-origin: bottom right;
   transition: transform 0.25s ease-in-out;
 }
@@ -109,13 +103,13 @@ body {
 .button {
   text-decoration: none;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--secondary);
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
 }
 
 .button:hover {
-  background-color: var(--red);
+  background-color: var(--secondary-dark);
   transition: all 0.3s ease-in-out;
 }
 
