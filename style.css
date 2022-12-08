@@ -34,7 +34,7 @@ body {
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1536px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -47,8 +47,9 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   display: flex;
+  gap: 10px;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 .navbar__logo:hover {
@@ -125,7 +126,7 @@ body {
     justify-content: space-between;
     z-index: 1;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1536px;
     padding: 0;
   }
 
