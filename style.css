@@ -18,6 +18,8 @@
 body {
   background-color: var(--secondary-dark-gray);
 }
+
+/* Navigation  */
 .navbar {
   background-color: var(--dark-gray);
   display: flex;
@@ -112,6 +114,8 @@ body {
   background-color: var(--secondary-dark);
   transition: all 0.3s ease-in-out;
 }
+
+/* Navigation End */
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
