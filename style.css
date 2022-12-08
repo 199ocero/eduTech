@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-  --dark-gray: #131313;
-  --primary: #fff477;
-  --secondary: #ff9808;
-  --secondary-dark: #ff7308;
+  --dark-gray: #000300;
+  --primary: #05ff82;
+  --secondary: #76ff36;
+  --secondary-dark: #44d700;
   --white: #fff;
   --max-width: 1536px;
 }
@@ -104,13 +104,14 @@ body {
 
 .button {
   text-decoration: none;
-  color: var(--white);
+  color: var(--dark-gray);
   background-color: var(--secondary);
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
 }
 
 .button:hover {
+  color: var(--dark-gray);
   background-color: var(--secondary-dark);
   transition: all 0.3s ease-in-out;
 }
@@ -130,6 +131,7 @@ body {
 
   .navbar__logo {
     padding-left: 1rem;
+    padding-top: 1rem;
   }
 
   .navbar__menu {
@@ -220,17 +222,17 @@ body {
 }
 .hero__content p {
   color: var(--white);
-  font-size: 3rem;
-  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .hero__btn {
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--dark-gray);
   border: none;
-  position: relative;
   margin-top: 2rem;
+  position: relative;
   background-image: linear-gradient(
     to top,
     var(--secondary) 0%,
@@ -238,13 +240,69 @@ body {
   );
 }
 .hero__btn a {
+  position: relative;
+  z-index: 2;
   color: var(--dark-gray);
   text-decoration: none;
+}
+
+.hero__btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--secondary);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.hero__btn:hover::after {
+  width: 100%;
 }
 
 .hero__image--container {
   margin: 0 auto;
 }
 .hero__image {
-  width: 400px;
+  width: 100%;
+}
+/* Hero Media Queries */
+@media screen and (max-width: 1024px) {
+  .hero__content h1 {
+    font-size: 3.5rem;
+  }
+  .hero__content p {
+    font-size: 1.5rem;
+  }
+  .hero__btn {
+    font-size: 1rem;
+  }
+  .hero__image {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 2.5rem;
+  }
+  .hero__content p {
+    font-size: 1rem;
+  }
+  .hero__content {
+    order: 2;
+  }
+  .hero__image--container {
+    order: 1;
+  }
+  .hero__container {
+    gap: 2rem;
+    text-align: center;
+    grid-template-columns: auto;
+    margin: 0 auto;
+  }
+  .hero__image {
+    width: 70%;
+  }
 }
