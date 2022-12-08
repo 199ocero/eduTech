@@ -2,11 +2,11 @@
 
 :root {
   --dark-gray: #131313;
-  --secondary-dark-gray: #1a1a1a;
   --primary: #fff477;
   --secondary: #ff9808;
   --secondary-dark: #ff7308;
   --white: #fff;
+  --max-width: 1536px;
 }
 
 * {
@@ -16,7 +16,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: var(--secondary-dark-gray);
+  background-color: var(--dark-gray);
 }
 
 /* Navigation  */
@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 1536px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 1rem;
 }
@@ -117,14 +117,14 @@ body {
 
 /* Navigation End */
 
-/* Media Queries */
+/* Navigation Media Queries */
 @media screen and (max-width: 1024px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
     z-index: 1;
     width: 100%;
-    max-width: 1536px;
+    max-width: var(--max-width);
     padding: 0;
   }
 
@@ -190,4 +190,61 @@ body {
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
+
+/* Hero */
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 10rem 1rem;
+}
+
+.hero__content h1 {
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    to top,
+    var(--secondary) 0%,
+    var(--primary) 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 5rem;
+}
+.hero__content p {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.hero__btn {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  margin-top: 2rem;
+  background-image: linear-gradient(
+    to top,
+    var(--secondary) 0%,
+    var(--primary) 100%
+  );
+}
+.hero__btn a {
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+.hero__image--container {
+  margin: 0 auto;
+}
+.hero__image {
+  width: 400px;
 }
