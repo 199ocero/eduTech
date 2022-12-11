@@ -2,7 +2,7 @@
 
 :root {
   --dark-gray: #000300;
-  --secondary-dark-gray: #000600;
+  --secondary-dark-gray: #011001;
   --primary: #05ff82;
   --secondary: #76ff36;
   --white: #fff;
@@ -29,6 +29,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 9999;
+  padding: 0 1rem;
 }
 .navbar__container {
   display: flex;
@@ -176,6 +177,9 @@ body {
 }
 
 /* Hero */
+.hero {
+  padding: 0 1rem;
+}
 .hero__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -253,6 +257,9 @@ body {
 .hero__image {
   width: 100%;
 }
+
+/* Hero End */
+
 /* Hero Media Queries */
 @media screen and (max-width: 1024px) {
   .hero__content h1 {
@@ -298,6 +305,7 @@ body {
 /* Services */
 .services {
   background-color: var(--secondary-dark-gray);
+  padding: 0 1rem;
 }
 .services__container {
   display: grid;
@@ -310,9 +318,6 @@ body {
   width: 100%;
   max-width: var(--max-width);
   padding: 10rem 1rem;
-}
-.services__content {
-  margin: 0 auto;
 }
 .services__content h1 {
   color: var(--white);
@@ -340,12 +345,55 @@ body {
   font-size: 1rem;
   line-height: 2.5rem;
 }
+.services__image--container {
+  margin: 0 auto;
+}
 .services__image {
-  width: 80%;
+  width: 100%;
+}
+/* Services End */
+
+/* Services Media Queries */
+@media screen and (max-width: 1024px) {
+  .services__content h1 {
+    font-size: 2.5rem;
+  }
+  .services__item h2 {
+    font-size: 1.5rem;
+  }
+  .services__item p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services__container {
+    text-align: center;
+    grid-template-columns: auto;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+  }
+
+  .services__image {
+    width: 70%;
+  }
+
+  .services__content h1 {
+    font-size: 2rem;
+  }
+  .services__item p {
+    font-size: 1rem;
+  }
+
+  .client__logo {
+    width: 30%;
+    margin: 2rem auto;
+  }
 }
 
 /* Clients */
-
+.clients {
+  padding: 0 1rem;
+}
 .clients__container {
   display: flex;
   flex-direction: column;
@@ -388,4 +436,42 @@ body {
 .client__logo {
   width: 20%;
   margin: auto;
+}
+/* End Clients */
+
+/* Client Media Queries */
+@media screen and (max-width: 1024px) {
+  .clients_logo--container {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+  }
+  .client__logo {
+    width: 20%;
+    margin: 2rem auto;
+  }
+  .clients__content h1 {
+    font-size: 2.5rem;
+  }
+  .clients__content p {
+    font-size: 1.2rem;
+  }
+  .client__logo {
+    width: 20%;
+    margin: 2rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clients__content h1 {
+    font-size: 2rem;
+  }
+  .clients__content p {
+    font-size: 1rem;
+  }
+
+  .client__logo {
+    width: 30%;
+    margin: 2rem auto;
+  }
 }
